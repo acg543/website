@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
@@ -22,6 +21,21 @@
             </svg>
           </a>
           <!-- LINKS -->
+          <div class=" ml-10 space-x-4 lg:block">
+            <a href="index.html" class="text-base font-medium text-amber-300 hover:text-amber-700">Home</a>
+
+            <a href="gallery.html" class="text-base font-medium text-amber-500 hover:text-amber-700"> Photo Gallery </a>
+
+            <a href="bookmarks.html" class="text-base font-medium text-amber-500 hover:text-amber-700"> Bookmarks </a>
+
+            <!-- <a href="recipes.html" class="text-base font-medium text-amber-500 hover:text-amber-700"> Recipes</a> -->
+
+            <!-- <a href="number.html" class="text-base font-medium text-amber-500 hover:text-amber-700"> Study </a> -->
+
+            <!-- <a href="#" class="text-base font-medium text-amber-500 hover:text-amber-700"> San </a> -->
+
+            <!-- <a href="#" class="text-base font-medium text-amber-500 hover:text-amber-600"> Shi </a> -->
+          </div>
         </div>
         <div class="ml-10 space-x-4">
           <!-- <a href="#" class="inline-block bg-sky-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Sign in</a>
@@ -29,7 +43,12 @@
 
           <div class="text-base font-medium text-amber-500">
             </p>
-            
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
           </div>
 
           <!-- <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
@@ -43,51 +62,108 @@
                 </div> -->
     </nav>
   </header>
-  <div style="height:800px;" class="container mx-auto px-48 py-24">
-    <!--This needs to be where I can create enough space for my container-->
-    <div class="grid grid-cols-3 gap-4">
-    
+  <div class="container mx-auto px-48 py-8">
+    <!-- Top body div -->
+    <div class="px-2 py-2 mb-8 border-none rounded-md border-amber-500">
+      <p class="text-4xl text-amber-500" id="current_date">
+        <script>
+          date = new Date();
+          year = date.getFullYear();
+          month = date.getMonth() + 1;
 
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4"><a href="index.html">
-        <img class="object-cover w-full" src="photo_gallery/sanjuan.jpg"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-          <h1 class="mb-3 text-2xl tracking-tight text-white">About</h1>
-        </div></a>
-      </div>
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4"><a href="gallery.html">
-        <img class="object-cover w-full" src="photo_gallery/aspen.jpg"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-            <h1 class="mb-3 text-2xl tracking-tight text-white">Photo Gallery</h1>
-        </div></a>
-      </div>
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4"><a href="map.html">
-        <img class="object-cover w-full" src="photo_gallery/sanjuan2.jpg"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-            <h1 class="mb-3 text-2xl tracking-tight text-white">Travel Map</h1>
-        </div></a>
-      </div>
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4">
-        <img class="object-cover w-full" src="photo_gallery/norway.jpg"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-            <h1 class="mb-3 text-2xl tracking-tight text-white">Sites & Links</h1>
-          </div>
-        </div>
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4">
-        <img class="object-cover w-full" src="photo_gallery/causeway.JPEG"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-            <h1 class="mb-3 text-2xl tracking-tight text-white">GitHub</h1>
-        </div>
-      </div>
-      <div class="imgOver relative overflow-hidden rounded-lg shadow-lg cursor-pointer border rounded-md border-amber-500 mb-4">
-        <img class="object-cover w-full" src="photo_gallery/bergendowntown.jpeg"/>
-        <div class="textOver absolute inset-0 flex justify-center items-center">
-            <h1 class="mb-3 text-2xl tracking-tight text-white">LinkedIn</h1>
-        </div>
+          if (month == 1) {
+            month = "January";
+            document.write(month);
+          }
+          if (month == 2) {
+            month = "February";
+            document.write(month);
+          }
+          if (month == 3) {
+            month = "March";
+            document.write(month);
+          }
+          if (month == 4) {
+            month = "April";
+            document.write(month);
+          }
+          if (month == 5) {
+            month = "May";
+            document.write(month);
+          }
+          if (month == 6) {
+            month = "June";
+            document.write(month);
+          }
+          if (month == 7) {
+            month = "July";
+            document.write(month);
+          }
+          if (month == 8) {
+            month = "August";
+            document.write(month);
+          }
+          if (month == 9) {
+            month = "September";
+            document.write(month);
+          }
+          if (month == 10) {
+            month = "October";
+            document.write(month);
+          }
+          if (month == 11) {
+            month = "November";
+            document.write(month);
+          }
+          if (month == 12) {
+            month = "December";
+            document.write(month);
+          }
+
+          day = date.getDate();
+          document.getElementById("current_date").innerHTML = "Today's date is " + month + " " + day + ", " + year;
+
+        </script>
+      </p>
+    </div>
+    <div class="text-lg mb-4 border rounded-md border-amber-500 border-none">
+
+      <p class="px-2 py-2 text-4xl text-gray-50">About</p>
+
+      <br>
+
+      <div class="flex items-center">
+        <img src="headshot.png" class="border rounded border-amber-500 border-2" />
+
+        <br>
+
+        <p class="px-4 py-4 ml-4 text-gray-50  border-2 rounded border-amber-500">Alexander Grenier<br><br>
+          Senior security engineer and computer science graduate with a history of working in web and app development from New Lenox, Illinois. 
+		  Versed in Python (Programming Language), C/C++ (Programming Language), Java (Programming Language), and Spanish. 
+		  Earned a Bachelor of Arts Degree from the University of Minnesota. 
+		  Strong communicative and management qualities with major interest in software development, hardware development, cybersecurity, linguistics, and global studies. 
+		  Outside of the workplace, you can find me dog-walking, exercising, or studying.
+        </p>
       </div>
 
+      <br><br><br>
+
+      <!--       <p class="px-2 py-2 text-4xl text-amber-500">
+        Live CV
+      </p>
+
+      <p class="px-2 py-2 text-amber-500">
+        recipes, geography, map game, live cv
+      </p> -->
+
+<!--       <p class="px-2 py-2 text-4xl text-gray-50">Core Qualifications</p>
+        -->
+
+      </div>
+
+      <br><br><br>
 
     </div>
-
   </div>
 
 
